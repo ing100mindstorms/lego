@@ -18,7 +18,10 @@ while ~JoyMainSwitch
     P04_F3_GetNewMeasurement
     P04_F4_MathCalculations    
     P04_F5_CalculateAndSetMotorPower
-    P04_F6_PlottData   % kan flyttes til etter while-løkka 
+    P04_F6_PlottData   % kan flyttes til etter while-løkka
+    if Lys(k)== 255
+        break
+    end
 end
 
 

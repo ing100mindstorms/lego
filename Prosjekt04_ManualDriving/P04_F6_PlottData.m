@@ -41,23 +41,21 @@ figure(fig1)
 subplot(3,2,1)
 plot(Tid(1:k), Lys(1:k),'b');
 hold on
-refline([0,nullpunkt]);
+hline = refline([0,nullpunkt]);
+hline.Color = 'k'
 plot(Tid(1:k), LysFiltrert_IIR(1:k),'r');
 xlabel('Tid [sek]')
-ylabel('Lys')
 title ('Lysmåling og filtrerte verdier')
 hold off
 
 subplot(3,2,2)
 plot(Tid(1:k-1),LysDerivert(1:k-1),'r');
 xlabel('Tid [sek]')
-ylabel('LysDerivert')
 title('Deriverte av filtrert lysmåling')
 
 subplot(3,2,3)
 plot(Tid(1:k),LysAvvik(1:k),'b'); 
 xlabel('Tid [sek]')
-ylabel('LysAvvik')
 title('LysAvvik')
 
 subplot(3,2,4)
