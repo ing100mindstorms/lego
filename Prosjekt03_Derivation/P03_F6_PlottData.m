@@ -15,10 +15,10 @@ plot(Tid(1:k),Lys(1:k));
 xlabel('Tid [sek]')
 title('Lys')
 
-subplot(2,2,1)
+subplot(2,2,2)
 plot(Tid(1:k-1),LysDerivert(1:k-1)) % LysDerivert er beregnet for k-1
 xlabel('Tid [sek]')
-titlel('LysDerivert')
+title('LysDerivert')
 
 %---------------------------------------------------
 % tegn nå (viktig kommando)

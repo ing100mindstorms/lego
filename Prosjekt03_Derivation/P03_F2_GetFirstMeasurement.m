@@ -76,9 +76,9 @@ end
 % Det er derfor viktig at de datavektorene som ikke skal 
 % være 0 i første element, initialiseres her!!!
 %----------------------------------------------------
-nullpunkt = Lys(k);         
+nullpunkt = Lys(k);
 
-LysFiltrert(1) = Lys(k);
+LysFiltrert_IIR(k) = Lys(1); % lik første måling
 
 %-----------------------------------------------------------
 % Initialiser figur fig1 (legg til flere figurer etterhvert)
