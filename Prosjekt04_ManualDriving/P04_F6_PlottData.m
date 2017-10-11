@@ -41,7 +41,7 @@ figure(fig1)
 subplot(3,2,1)
 plot(Tid(1:k), Lys(1:k),'b');
 hold on
-refline([0,nullpunktet]);
+refline([0,nullpunkt]);
 plot(Tid(1:k), LysFiltrert_IIR(1:k),'r');
 xlabel('Tid [sek]')
 ylabel('Lys')
