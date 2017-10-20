@@ -5,5 +5,5 @@
 % - TimeStep (time difference between discrete index k and k-1)
 % to calculate the derivation value at discrete index k-1.
 function [Secant] = Derivation(FunctionValues, TimeStep)
-    Secant = (FunctionValues(1) - FunctionValues(2))/TimeStep;
+    Secant = (FunctionValues(2) - FunctionValues(1))/TimeStep;
 end
