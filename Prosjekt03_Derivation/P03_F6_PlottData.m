@@ -10,15 +10,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 figure(fig1)
-subplot(2,2,1)
-plot(Tid(1:k),Lys(1:k)); 
+subplot(2,1,1)
+plot(Tid(1:k),Lys(1:k),'r');
+hold on
+plot(Tid(1:k), LysFiltrert_IIR(1:k), 'b')
 xlabel('Tid [sek]')
+legend('Lys', 'LysFiltrert\_IRR')
 title('Lys')
 
-subplot(2,2,2)
-plot(Tid(1:k-1),LysDerivert(1:k-1)) % LysDerivert er beregnet for k-1
+subplot(2,1,2)
+plot(Tid(2:k),LysDerivert(1:k-1)) % LysDerivert er beregnet for k-1
+axis([0 12 -2500 2500])
 xlabel('Tid [sek]')
+legend('LysDerivert')
 title('LysDerivert')
+
 
 %---------------------------------------------------
 % tegn nå (viktig kommando)
