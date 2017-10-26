@@ -20,7 +20,7 @@ while ~JoyMainSwitch
     P11_F3_GetNewMeasurement
     P11_F4_MathCalculations    
     P11_F5_CalculateAndSetMotorPower
-    if(Tid(k) == 10)
+    if(Tid(k) > 10)
         break
     end
 end

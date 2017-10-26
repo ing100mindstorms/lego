@@ -20,8 +20,8 @@ if online
     OpenLight(SENSOR_3,'ACTIVE') % ACTIVE/DEACTIVE
 %     OpenSound(SENSOR_Y,'DB')     % DB eller DBA
 %     OpenSwitch(SENSOR_Y)
-%     OpenUltrasonic(SENSOR_Y)
-%     OpenAccelerator(SENSOR_Y)
+ %    OpenUltrasonic(SENSOR_3)
+ %    OpenAccelerator(SENSOR_4)
 %     
     %------------------------------------------------
     % Initialiser motorer (slett de du ikke bruker)
@@ -30,10 +30,10 @@ if online
 %     motorA.ResetPosition();
 % 
 %    motorB = NXTMotor('B');
- %   motorB.ResetPosition();
+%    motorB.ResetPosition();
 
- %   motorC = NXTMotor('C');
- %  motorC.ResetPosition();
+  %  motorC = NXTMotor('C');
+ %   motorC.ResetPosition();
 
 
     %------------------------------------------------
