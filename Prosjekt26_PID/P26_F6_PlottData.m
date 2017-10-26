@@ -79,15 +79,16 @@ xlabel('Tid [sek]');
 title('PowerC');
 
 subplot(3,3,8)
-plot(Tid(1:k), PowerB(1:k), 'm');
+plot(Tid(1:k), my(1:k), 'm');
 xlabel('Tid [sek]');
-title('PowerB');
+title('my');
 
 subplot(3,3,9)
-plot(Tid(1:k), PowerC(1:k), 'y');
+plot(Tid(1:k), D(1:k), 'r');
 hold on;
-plot(Tid(1:k), PowerB(1:k), 'm');
-plot(Tid(1:k), PID(1:k), 'c');
+plot(Tid(1:k), P(1:k), 'g');
+plot(Tid(1:k), I(1:k), 'y');
+plot(Tid(1:k), PID(1:k), 'b');
 hold off;
 xlabel('Tid [sek]');
 title('Motor and PID');

@@ -9,5 +9,6 @@ function [Speed] = motorSpeedCalculator(angle, timestep, radius)
 % - radius (the radius of the wheel)
 
     distanceTraveled = (angle(2) - angle(1))*radius;
-    Speed = distanceTraveled / timestep;
+    tid = timestep(2)-timestep(1);
+    Speed = distanceTraveled / tid;
 end

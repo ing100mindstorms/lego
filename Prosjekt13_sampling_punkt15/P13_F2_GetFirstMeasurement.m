@@ -62,7 +62,7 @@ if online==1
     % er kommandoen slik (du må ta bort og legge til 
     % i forhold til ditt prosjekt):
     %
-    save('P13_Sampling.mat','Tid','Lys')
+    save('P13_Sampling2.mat','Tid','Lys')
     %
     % Dersom du: 
     %   - ikke skal benytte loggede data i ONLINE=0 men bare
@@ -99,15 +99,6 @@ end
 % være 0 i første element, initialiseres her!!!
 %----------------------------------------------------
 
-motorHastighet(k) = 0; %Hastigheten er alltid 0 når den starter
-
-Tidspunkt(k) = Tid(1);
-
-UltraLydDerivert_IIR(k) = Avstand(1); % lik første måling
-
-AbsoluttAkselerometer(k) = sqr(sum(abs(AksLEGO(:,1)))); % lik første måling
-
-AkselerometerIntegrert(k) = Lys(1); % lik første måling
 
 %-----------------------------------------------------------
 % Initialiser figur fig1 (legg til flere figurer etterhvert)

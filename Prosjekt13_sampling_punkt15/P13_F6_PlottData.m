@@ -30,12 +30,12 @@
 
 figure(fig1)
 sample = 50;
-plot(Tid(1:k),Lys(1:k),’b’);
+plot(Tid(10:k),Lys(10:k),'b');
 hold on
-plot(Tid(1:sample:k),Lys(1:sample:k),’-r*’);
+plot(Tid(10:sample:k),Lys(10:sample:k),'-r*');
 hold off
 xlabel('Tid [sek]')
-title('’Blå: Opprinnelig lyssignal. ', ...
+title(['’Blå: Opprinnelig lyssignal. ', ...
 'Rød: Samplet lyssignal (hver ',num2str(sample),'. lysmåling)'])
 %---------------------------------------------------
 drawnow

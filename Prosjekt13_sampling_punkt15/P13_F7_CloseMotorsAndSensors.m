@@ -15,14 +15,7 @@ if online
 
     %----------------------------------------------------------------
     % Stopp motorer og steng ned sensorer (slett de du ikke bruker)
-    %----------------------------------------------------------------
-    motorA.Stop;            % Stopp motorer
-    motorB.Stop;            % Stopp motorer
-    motorC.Stop;            % Stopp motorer
-    CloseSensor(SENSOR_1);  % Steng ned sensor 1
-    CloseSensor(SENSOR_2);  % Steng ned sensor 2
     CloseSensor(SENSOR_3);  % Steng ned sensor 3
-    CloseSensor(SENSOR_4);  % Steng ned sensor 4
 
     %----------------------------------------------------------------
     % Lukk kopling til NXT og styrestikke

@@ -29,11 +29,11 @@ if online
 %     motorA = NXTMotor('A');
 %     motorA.ResetPosition();
 % 
-%    motorB = NXTMotor('B');
- %   motorB.ResetPosition();
+    motorB = NXTMotor('B');
+    motorB.ResetPosition();
 
- %   motorC = NXTMotor('C');
- %  motorC.ResetPosition();
+    motorC = NXTMotor('C');
+   motorC.ResetPosition();
 
 
     %------------------------------------------------

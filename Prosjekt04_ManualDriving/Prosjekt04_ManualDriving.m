@@ -9,7 +9,7 @@
 
 
 clear; close all               % Alltid lurt å rydde opp først
-online=0;                      % Er du koplet til NXT eller ikke?
+online=1;                      % Er du koplet til NXT eller ikke?
 filename = 'P04_DataNavn.mat'; % Navnet på datafilen når online=0. 
 
 P04_F1_InitializeNXT 

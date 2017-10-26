@@ -8,5 +8,3 @@
 %------------------------------------------------
 % Definer parametre som brukes i beregningene. 
 %------------------------------------------------
-
-Ts(k-1) = Tid(k)-Tid(k-1); % beregn tidsskritt i sekund

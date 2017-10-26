@@ -45,8 +45,8 @@ if online
      InfoMotorC = motorC.ReadFromNXT();  
 %     
 %     PosMotorA(k) = InfoMotorA.Position;
-     PosMotorB(k) = InfoMotorB.Position;
-     PosMotorC(k) = InfoMotorC.Position;
+     PosMotorB(k) = degtorad(InfoMotorB.Position);
+     PosMotorC(k) = degtorad(InfoMotorC.Position);
 %     
     %------------------------------------------------
     % spør etter nye data fra styrestikke

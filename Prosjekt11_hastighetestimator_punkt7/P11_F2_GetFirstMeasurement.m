@@ -62,7 +62,7 @@ if online==1
     % er kommandoen slik (du må ta bort og legge til 
     % i forhold til ditt prosjekt):
     %
-    save('P11_DataNavn.mat','Tid','Lys','PosMotorB','PosMotorC')
+    save('P11_px300_power10.mat','Tid','Lys','PosMotorB','PosMotorC')
     %
     % Dersom du: 
     %   - ikke skal benytte loggede data i ONLINE=0 men bare
@@ -104,7 +104,8 @@ motorHastighet(1) = 0; %Hastigheten er alltid 0 når den starter
 motorHastighetB(1) = 0;
 motorHastighetC(1) = 0;
 
-Tidspunkt(1) = Tid(1);
+hastighet(1) = 0;
+tidspunkt(1) = Tid(1);
 
 LysFiltrert_IIR(k) = Lys(1); % lik første måling
 

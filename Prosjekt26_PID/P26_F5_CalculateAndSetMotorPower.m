@@ -27,8 +27,8 @@ Brems=-2;
 % PowerB(k)=PowerB(k)
 % PowerC(k)=PowerC(k)
 
-PowerB(k) = round(my + PID(k));
-PowerC(k) = round(my - PID(k));
+PowerB(k) = round(my(k) - PID(k));
+PowerC(k) = round(my(k) + PID(k));
 
 
 if online

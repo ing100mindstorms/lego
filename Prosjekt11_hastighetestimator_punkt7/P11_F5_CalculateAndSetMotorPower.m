@@ -27,8 +27,8 @@ Brems=-2;
 % PowerB(k)=PowerB(k)
 % PowerC(k)=PowerC(k)
 
-PowerB(K) = JUICE;
-PowerC(K) = JUICE;
+PowerB(k) = JUICE;
+PowerC(k) = JUICE;
 
 
 if online

@@ -16,7 +16,7 @@ if online
     %----------------------------------------------------------------
     % Stopp motorer og steng ned sensorer (slett de du ikke bruker)
     %----------------------------------------------------------------
-    motorA.Stop;            % Stopp motorer
+    %motorA.Stop;            % Stopp motorer
     motorB.Stop;            % Stopp motorer
     motorC.Stop;            % Stopp motorer
     CloseSensor(SENSOR_1);  % Steng ned sensor 1

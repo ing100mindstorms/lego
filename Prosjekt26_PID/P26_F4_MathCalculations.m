@@ -9,6 +9,13 @@
 % Definer parametre som brukes i beregningene. 
 %------------------------------------------------
 
+
+
+Kp = 0.2; %Proposjonalitet forsterkning - Dvs hvor intenst PID skal korrigere
+Ki = 0.01; %Integral forsterkning - Dvs hvor lenge PID skal være i "error mode" (hindrer offset)
+Kd = 0.0; %Derivat forsterkning - Dvs hvor raskt PID skal reagere til nye verdier
+
+
 Ts(k-1) = Tid(k)-Tid(k-1); % beregn tidsskritt i sekund
 LysAvvik(k) = Lys(k)-nullpunkt; % beregn avvik fra nullpunkt
 
@@ -38,7 +45,7 @@ Score(k) = Tid(k) * 10 + HvorVinglete(k); %Regner ut score
 %Maks lysmåling før break i hovedprogrammet er 620 og teoretisk
 %maksverdi til Lysavvik er 310 (620/2 = 310), men siden den kan bli
 %plassert dårlig, settes makstaket til 360.
-my = 15 * (1 - abs(LysAvvik(k))/360); 
+my(k) = 20 * (1 - abs(LysAvvik(k))/200); 
 
 %----- Kalkulasjoner ---------------------------------------
 P(k) = Kp * LysAvvik(k); %'Proposjonal'-delen i PID. Formel: P = Kp * e(t)
