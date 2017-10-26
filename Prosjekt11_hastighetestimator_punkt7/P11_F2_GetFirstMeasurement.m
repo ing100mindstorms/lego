@@ -101,6 +101,8 @@ end
 nullpunkt = Lys(k);
 
 motorHastighet(1) = 0; %Hastigheten er alltid 0 når den starter
+motorHastighetB(1) = 0;
+motorHastighetC(1) = 0;
 
 Tidspunkt(1) = Tid(1);
 

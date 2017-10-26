@@ -25,4 +25,7 @@ end
 motorHastighetB(k) = motorSpeedCalculator(PosMotorB(k), Ts(k-1), radius); %Beregner hastighet utifra motorposisjon
 motorHastighetC(k) = motorSpeedCalculator(PosMotorC(k), Ts(k-1), radius); %Beregner hastighet utifra motorposisjon
 
+%Tar gjennomsnitthastighet mellom de to forskjellige motorene
+%Denne kan fjernes hvis man trenger hastigheten separat til begge motorone
+%et annet prosjekt.
 motorHastighet(k) = (motorHastighetB(k) + motorHastighetC(k)) / 2;

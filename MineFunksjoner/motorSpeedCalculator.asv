@@ -1,0 +1,18 @@
+% EulerForward Numerical integration
+% EulerForward(IntValueOld, FunctionValue, TimeStep) use the
+% following values from the previous discrete index k-1:
+% - IntValueOld (the previous integral value)
+% - FunctionValue (the function value to be integrated)
+% - TimeStep (time difference between discrete index k and k-1)
+% to calculate the integral value at discrete index k.
+
+function [Speed] = motorSpeedCalculator(angle, timestep, radius)
+
+%Motor Speed Calculation
+%motorSpeedCalculator(angle, timestep, radius) use the following values in
+%order to calculate velocity:
+% - angle (contains two values, the previous value angle(1) and the present
+%          value angle
+    distanceTraveled = (angle(2) - angle(1))*radius;
+    Speed = distanceTraveled / timestep;
+end
