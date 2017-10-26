@@ -62,10 +62,7 @@ if online==1
     % er kommandoen slik (du må ta bort og legge til 
     % i forhold til ditt prosjekt):
     %
-    % save('P0X_DataNavn.mat','Tid','Lys','Lyd',...
-    %       'Bryter','Avstand','Tilt','Aks','AksLEGO',...
-    %       'PosMotorA','PosMotorB','PosMotorC',...
-    %       'JoyForover')
+     save('P26_DataNavn.mat','Tid','Lys')
     %
     % Dersom du: 
     %   - ikke skal benytte loggede data i ONLINE=0 men bare
@@ -106,7 +103,7 @@ nullpunkt = Lys(k);
 LysFiltrert_IIR(k) = Lys(1); % lik første måling
 
 LysIntegrert(k) = Lys(1); % lik første måling
-HvorVinglete(k) = Lys(1); % lik første måling
+HvorVinglete(k) = 0; % lik første måling
 
 %-----------------------------------------------------------
 % Initialiser figur fig1 (legg til flere figurer etterhvert)

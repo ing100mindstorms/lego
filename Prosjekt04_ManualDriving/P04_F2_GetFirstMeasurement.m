@@ -106,7 +106,7 @@ nullpunkt = Lys(k);
 LysFiltrert_IIR(k) = Lys(1); % lik første måling
 
 LysIntegrert(k) = Lys(1); % lik første måling
-HvorVinglete(k) = Lys(1); % lik første måling
+HvorVinglete(k) = 0; % lik første måling
 
 %-----------------------------------------------------------
 % Initialiser figur fig1 (legg til flere figurer etterhvert)

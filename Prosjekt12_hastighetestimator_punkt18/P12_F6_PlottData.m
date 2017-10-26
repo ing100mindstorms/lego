@@ -38,32 +38,46 @@
 % end
 
 figure(fig1)
-subplot(2,2,1)
-plot(Tid(1:k), Lys(1:k),'b');
-hold on
-hline = refline([0,nullpunkt]);
-hline.Color = 'k';
-plot(Tid(1:k), LysFiltrert_IIR(1:k),'r');
+subplot(3,2,1)
+plot(Tid(1:k), UltraLydFiltrert_IIR(1:k),'r');
 xlabel('Tid [sek]')
-title ('Lysmåling og filtrerte verdier')
-hold off
+ylabel('Avstand [cm]')
+title ('Filtrert UltraLyd')
 
-subplot(2,2,2)
-plot(Tid(1:k-1),LysDerivert(1:k-1),'r');
+subplot(3,2,2)
+plot(Tid(1:k),AbsoluttAkselerometer(k),'b');
 xlabel('Tid [sek]')
-title('Derivert')
+ylabel('cm/sek^2')
+title('Akselerasjon')
 
-subplot(2,2,3)
-plot(tidspunkt,hastighet,'g');
-xlabel('Tid [sek]')
-ylabel('cm/sek')
-title('Hastighet med Lyssensor')
-
-subplot(2,2,4)
-plot(Tid(1:k), motorHastighet(1:k),'b')
+subplot(3,2,3)
+plot(Tid(1:k), motorHastighet(1:k),'g')
 xlabel('Tid [sek]')
 ylabel('cm/sek')
 title('Hastighet med motorposisjon')
+
+subplot(3,2,4)
+plot(Tid(1:k-1),UltraLydDerivert(k-1),'r');
+xlabel('Tid [sek]')
+ylabel('cm/sek')
+title('UltraLydDerivert')
+
+subplot(3,2,5)
+plot(Tid(1:k-1),AkselerometerIntegrert(k),'b');
+xlabel('Tid [sek]')
+ylabel('cm/sek')
+title('AkselerometerIntegrert')
+
+subplot(3,2,6)
+plot(Tid(1:k), motorHastighet(1:k),'g')
+hold on
+plot(Tid(1:k-1),UltraLydDerivert(k-1),'r');
+plot(Tid(1:k-1),AkselerometerIntegrert(k),'b');
+hold off
+xlabel('Tid [sek]')
+ylabel('cm/sek'
+legend('motor','Ultralyd','Akselerometer')
+title('HastighetSammenligner')
 %---------------------------------------------------
 drawnow
 

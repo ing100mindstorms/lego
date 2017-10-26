@@ -62,7 +62,7 @@ if online==1
     % er kommandoen slik (du må ta bort og legge til 
     % i forhold til ditt prosjekt):
     %
-    save('P11_DataNavn.mat','Tid','Lys','PosMotorB','PosMotorC',JoyForover')
+    save('P11_DataNavn.mat','Tid','Lys','PosMotorB','PosMotorC')
     %
     % Dersom du: 
     %   - ikke skal benytte loggede data i ONLINE=0 men bare
@@ -98,7 +98,11 @@ end
 % Det er derfor viktig at de datavektorene som ikke skal 
 % være 0 i første element, initialiseres her!!!
 %----------------------------------------------------
-nullpunkt = Lys(k); 
+nullpunkt = Lys(k);
+
+motorHastighet(1) = 0; %Hastigheten er alltid 0 når den starter
+
+Tidspunkt(1) = Tid(1);
 
 LysFiltrert_IIR(k) = Lys(1); % lik første måling
 

@@ -20,10 +20,10 @@ if online==1
     %------------------------------------------------
     % hent første måling fra sensorene (slett de du ikke bruker)
     %------------------------------------------------
-    Lys(k)     = GetLight(SENSOR_3);   
+%    Lys(k)     = GetLight(SENSOR_3);   
 %     Lyd(k)     = GetSound(SENSOR_Y);   
 %     Bryter(k)  = GetSwitch(SENSOR_Y);   
- %    Avstand(k) = GetUltrasonic(SENSOR_Y);    
+     Avstand(k) = GetUltrasonic(SENSOR_3);    
 
     %------------------------------------------------
     % flatt akselerometer (slett om du ikke bruker)
@@ -34,20 +34,19 @@ if online==1
     %------------------------------------------------
     % LEGO akselerometer (slett om du ikke bruker)
     %------------------------------------------------
-%     AksLEGO(:,k) = GetAccelerator(SENSOR_Y);
+     AksLEGO(:,k) = GetAccelerator(SENSOR_4);
 
     %------------------------------------------------
     % hent måling av motorposisjoner (slett om du ikke bruker)
     %------------------------------------------------
 %     InfoMotorA = motorA.ReadFromNXT();  
-%     InfoMotorB = motorB.ReadFromNXT();  
-%     InfoMotorC = motorC.ReadFromNXT();  
+     InfoMotorB = motorB.ReadFromNXT();  
+     InfoMotorC = motorC.ReadFromNXT();  
 %     
 %     PosMotorA(k) = InfoMotorA.Position;
-     PosMotorB(k) = InfoMotorB.Position;
-     PosMotorC(k) = InfoMotorC.Position;
-
-     NullpunktMotorB = PosMot
+     PosMotorB(k) = degtorad(InfoMotorB.Position);
+     PosMotorC(k) = degtorad(InfoMotorC.Position);
+     
     %------------------------------------------------
     % spør etter data fra styrestikke 
     % Utvid selv med andre knapper og akser
@@ -63,7 +62,7 @@ if online==1
     % er kommandoen slik (du må ta bort og legge til 
     % i forhold til ditt prosjekt):
     %
-    save('P11_DataNavn.mat','Tid','Lys','PosMotorB','PosMotorC',JoyForover')
+    save('P12_DataNavn.mat','Tid','AksLEGO','Avstand','PosMotorB','PosMotorC')
     %
     % Dersom du: 
     %   - ikke skal benytte loggede data i ONLINE=0 men bare
@@ -99,12 +98,16 @@ end
 % Det er derfor viktig at de datavektorene som ikke skal 
 % være 0 i første element, initialiseres her!!!
 %----------------------------------------------------
-nullpunkt = Lys(k); 
 
-LysFiltrert_IIR(k) = Lys(1); % lik første måling
+motorHastighet(k) = 0; %Hastigheten er alltid 0 når den starter
 
-LysIntegrert(k) = Lys(1); % lik første måling
-HvorVinglete(k) = Lys(1); % lik første måling
+Tidspunkt(k) = Tid(1);
+
+UltraLydDerivert_IIR(k) = Avstand(1); % lik første måling
+
+AbsoluttAkselerometer(k) = sqr(sum(abs(AksLEGO(:,1)))); % lik første måling
+
+AkselerometerIntegrert(k) = Lys(1); % lik første måling
 
 %-----------------------------------------------------------
 % Initialiser figur fig1 (legg til flere figurer etterhvert)

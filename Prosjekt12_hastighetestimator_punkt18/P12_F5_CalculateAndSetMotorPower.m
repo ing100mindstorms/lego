@@ -9,7 +9,7 @@ a = 0.11;
 b = 0.01;
 c=1;
 
-JUICE=15;
+JUICE=10;
 Brems=-2;
 
 %------------------------------------------------
@@ -27,8 +27,8 @@ Brems=-2;
 % PowerB(k)=PowerB(k)
 % PowerC(k)=PowerC(k)
 
-PowerB(k) = round(my + PID(k));
-PowerC(k) = round(my - PID(k));
+PowerB(k) = JUICE;
+PowerC(k) = JUICE;
 
 
 if online
